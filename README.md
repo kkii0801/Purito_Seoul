@@ -1,8 +1,13 @@
 <주요 인터렉션 설멍>
 
 1. 메인 section에서 커스텀 커서 구현하기
+2. 스크롤에 따라 움직이는 typography 
+3. 이미지에 부드러운 크기 변화 부여하기
 
-<작동 예시>
+
+<메인 section에서 커스텀 커서 구현하기>
+
+<동작 예시>
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images/main_section_custom_cursor_GIF.gif?raw=true)
 
 <코드>
@@ -44,3 +49,12 @@ customHover.forEach(function(item){
 
 <설명>
 
+<스크롤에 따라 움직이는 typography>
+
+<동작 예시>
+![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/typotext_GIF.gif?raw=true)
+
+<이미지에 부드러운 크기 변화 부여하기>
+
+<동작 예시>
+![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/css_GIF.gif?raw=true)
