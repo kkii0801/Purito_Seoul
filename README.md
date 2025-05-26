@@ -1,20 +1,23 @@
 프로젝트 이름 : Purito_Seoul
-Tools : React, JavaScript, GSAP, Swiper, CSS
+사용된 도구 : React, JavaScript, GSAP, Swiper, CSS
 사용환경 : PC, Mobile
 
-<주요 인터렉션 설멍>
+***
+
+##주요 인터렉션 설멍
 
 1. 메인 section에서 커스텀 커서 구현하기
 2. 스크롤에 따라 움직이는 typography 
 3. 이미지에 부드러운 크기 변화 부여하기
 
+***
 
-<메인 section에서 커스텀 커서 구현하기>
+##메인 section에서 커스텀 커서 구현하기
 
-<동작 예시>
+###동작 예시
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/main_section_custom_cursor_GIF.gif?raw=true)
 
-<코드 설명>
+###코드 설명
 ``` JavaScript
 let customHover=document.querySelectorAll(".custom-hover");
 let pageTop=document.querySelector("#page-top");
@@ -111,12 +114,14 @@ forEach를 이용하여 메인 슬라이더의 1페이지와 2페이지의 .cust
 }
 ```
 
-<스크롤에 따라 움직이는 typography>
+***
 
-<동작 예시>
+##스크롤에 따라 움직이는 typography
+
+###동작 예시
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/typotext_GIF.gif?raw=true)
 
-<코드 설명>
+###코드 설명
 ``` JavaScript
 xoffset=7;
 gsap.utils.toArray(".main-typo").forEach(function(item){
@@ -143,14 +148,16 @@ tl.to(item.querySelector("div:nth-child(2)"), {
 xoffset=7;로 애니메이션에서 사용할 x축 오프셋을 정의합니다.
 gsap.utils.toArray는 document.querySelectorAll이랑 같은 기능을 합니다. 이를 이용하여 forEach로 각각의 .main-typo를 지정해줍니다.
 gsap.timeline와 scrollTrigger를 이용하여 gsap 애니메이션을 부여해줍니다.
-delay: -1를 이용하여 "div:nth-child(1)"와 "div:nth-child(2)"가 동시에 작동하도록 설정해줍니다.
+delay: -1를 이용하여 "div:nth-child(1)"와 "div:nth-child(2)"가 동시에 작동하도록 설정해줄 수 있습니다.
 
-<이미지에 부드러운 크기 변화 부여하기>
+***
 
-<동작 예시>
+##이미지에 부드러운 크기 변화 부여하기
+
+###동작 예시
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/css_GIF.gif?raw=true)
 
-<코드 설명>
+###코드 설명
 ``` JavaScript
 gsap.utils.toArray(".scale-ani").forEach(function(item){
 gsap.timeline({
