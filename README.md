@@ -8,7 +8,7 @@
 <메인 section에서 커스텀 커서 구현하기>
 
 <동작 예시>
-![images](https://github.com/kkii0801/Readme_files/blob/main/images/main_section_custom_cursor_GIF.gif?raw=true)
+![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/main_section_custom_cursor_GIF.gif?raw=true)
 
 <코드>
 ``` JavaScript
