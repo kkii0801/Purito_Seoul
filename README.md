@@ -1,6 +1,7 @@
 프로젝트 이름 : Purito_Seoul <br />
 사용된 도구 : React, JavaScript, GSAP, Swiper, CSS <br />
 사용환경 : PC, Mobile
+[OpenAI](https://project1-dusky-omega.vercel.app/)
 
 ***
 
