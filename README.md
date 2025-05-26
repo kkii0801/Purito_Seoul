@@ -19,6 +19,7 @@
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/main_section_custom_cursor_GIF.gif?raw=true)
 
 ### 코드 설명
+#### JavaScript
 ``` JavaScript
 let customHover=document.querySelectorAll(".custom-hover");
 let pageTop=document.querySelector("#page-top");
@@ -58,6 +59,7 @@ customHover.forEach(function(item){
 ```
 forEach를 이용하여 메인 슬라이더의 1페이지와 2페이지의 .custom-hover에 gsap.to를 설정해줍니다. <br />
 이때 커스텀 커서의 css 속성은 다음과 같습니다.
+#### CSS
 ``` CSS
 #custom-cursor,
 #custom-cursor-text {
@@ -123,6 +125,7 @@ forEach를 이용하여 메인 슬라이더의 1페이지와 2페이지의 .cust
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/typotext_GIF.gif?raw=true)
 
 ### 코드 설명
+#### JavaScript
 ``` JavaScript
 xoffset=7;
 gsap.utils.toArray(".main-typo").forEach(function(item){
@@ -159,6 +162,7 @@ delay: -1를 이용하여 "div:nth-child(1)"와 "div:nth-child(2)"가 동시에 
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/css_GIF.gif?raw=true)
 
 ### 코드 설명
+#### JavaScript
 ``` JavaScript
 gsap.utils.toArray(".scale-ani").forEach(function(item){
 gsap.timeline({
@@ -182,6 +186,7 @@ gsap.timeline({
 ```
 똑같이 gsap.utils.toArray와 forEach를 이용하여 각각의 .scale-ani에 gsap.timeline를 설정해줍니다. <br />
 onEnter, onLeave, onLeaveBack를 이용하여 스크롤의 위치에 따라 active 클래스를 부여하거나 제거하는데 이에 관련된 CSS 속성은 다음과 같습니다.
+#### CSS
 ``` CSS
 .scale-ani {
 	transform: scale(0.8);
