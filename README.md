@@ -1,5 +1,5 @@
-프로젝트 이름 : Purito_Seoul
-사용된 도구 : React, JavaScript, GSAP, Swiper, CSS
+프로젝트 이름 : Purito_Seoul <br />
+사용된 도구 : React, JavaScript, GSAP, Swiper, CSS <br />
 사용환경 : PC, Mobile
 
 ***
@@ -55,7 +55,7 @@ customHover.forEach(function(item){
 	});
 });
 ```
-forEach를 이용하여 메인 슬라이더의 1페이지와 2페이지의 .custom-hover에 gsap.to를 설정해줍니다.
+forEach를 이용하여 메인 슬라이더의 1페이지와 2페이지의 .custom-hover에 gsap.to를 설정해줍니다. <br />
 이때 커스텀 커서의 css 속성은 다음과 같습니다.
 ``` CSS
 #custom-cursor,
@@ -146,7 +146,7 @@ tl.to(item.querySelector("div:nth-child(2)"), {
 });
 ```
 xoffset=7;로 애니메이션에서 사용할 x축 오프셋을 정의합니다. <br />
-gsap.utils.toArray는 document.querySelectorAll이랑 같은 기능을 합니다. 이를 이용하여 forEach로 각각의 .main-typo를 지정해줍니다. <br />
+gsap.utils.toArray는 document.querySelectorAll과 같은 기능을 합니다. 이를 이용하여 forEach로 각각의 .main-typo를 지정해줍니다. <br />
 gsap.timeline와 scrollTrigger를 이용하여 gsap 애니메이션을 부여해줍니다. <br />
 delay: -1를 이용하여 "div:nth-child(1)"와 "div:nth-child(2)"가 동시에 작동하도록 설정해줄 수 있습니다.
 
