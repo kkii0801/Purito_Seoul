@@ -4,7 +4,7 @@
 
 ***
 
-## 주요 인터렉션 설멍
+## 주요 인터렉션 설명
 
 1. 메인 section에서 커스텀 커서 구현하기
 2. 스크롤에 따라 움직이는 typography 
@@ -179,7 +179,7 @@ gsap.timeline({
 });
 });
 ```
-똑같이 gsap.utils.toArray와 forEach를 이용하여 각각의 .scale-ani에 gsap.timelien를 설정해줍니다. <br />
+똑같이 gsap.utils.toArray와 forEach를 이용하여 각각의 .scale-ani에 gsap.timeline를 설정해줍니다. <br />
 onEnter, onLeave, onLeaveBack를 이용하여 스크롤의 위치에 따라 active 클래스를 부여하거나 제거하는데 이에 관련된 CSS 속성은 다음과 같습니다.
 ``` CSS
 .scale-ani {
