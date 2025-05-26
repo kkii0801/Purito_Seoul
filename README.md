@@ -1,3 +1,7 @@
+프로젝트 이름 : Purito_Seoul
+Tools : React, JavaScript, GSAP, Swiper, CSS
+사용환경 : PC, Mobile
+
 <주요 인터렉션 설멍>
 
 1. 메인 section에서 커스텀 커서 구현하기
@@ -112,7 +116,93 @@ forEach를 이용하여 메인 슬라이더의 1페이지와 2페이지의 .cust
 <동작 예시>
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/typotext_GIF.gif?raw=true)
 
+<코드 설명>
+``` JavaScript
+xoffset=7;
+gsap.utils.toArray(".main-typo").forEach(function(item){
+const tl=gsap.timeline({
+	scrollTrigger: {
+		trigger: item,
+		scrub: 1,
+		start: "top bottom"
+	}
+});
+
+tl.to(item.querySelector("div:nth-child(1)"), {
+	x: -1*xoffset+"%",
+	duration: 1
+});
+
+tl.to(item.querySelector("div:nth-child(2)"), {
+	x: xoffset+"%",
+	duration: 1,
+	delay: -1
+});
+});
+```
+xoffset=7;로 애니메이션에서 사용할 x축 오프셋을 정의합니다.
+gsap.utils.toArray는 document.querySelectorAll이랑 같은 기능을 합니다. 이를 이용하여 forEach로 각각의 .main-typo를 지정해줍니다.
+gsap.timeline와 scrollTrigger를 이용하여 gsap 애니메이션을 부여해줍니다.
+delay: -1를 이용하여 "div:nth-child(1)"와 "div:nth-child(2)"가 동시에 작동하도록 설정해줍니다.
+
 <이미지에 부드러운 크기 변화 부여하기>
 
 <동작 예시>
 ![images](https://github.com/kkii0801/Readme_files/blob/main/images_1/css_GIF.gif?raw=true)
+
+<코드 설명>
+``` JavaScript
+gsap.utils.toArray(".scale-ani").forEach(function(item){
+gsap.timeline({
+	scrollTrigger: {
+		trigger: item,
+		start: "top bottom",
+		end: "bottom top",
+		onEnter: function(){
+			item.classList.add("active");
+		},
+		onLeave: function(){
+			item.classList.remove("active");
+		},
+		onLeaveBack: function(){
+			item.classList.remove("active");
+		}
+	},
+	delay: 2
+});
+});
+```
+똑같이 gsap.utils.toArray와 forEach를 이용하여 각각의 .scale-ani에 gsap.timelien를 설정해줍니다.
+onEnter, onLeave, onLeaveBack를 이용하여 스크롤의 위치에 따라 active 클래스를 부여하거나 제거하는데 이에 관련된 CSS 속성은 다음과 같습니다.
+``` CSS
+.scale-ani {
+	transform: scale(0.8);
+}
+.scale-ani img {
+	transform: scale(1.5);
+}
+.scale-ani.active {
+	animation: scaleUpImg 2s forwards;
+}
+.scale-ani.active img {
+	animation: scaleDownImg 2s forwards;
+}
+
+@keyframes scaleUpImg {
+	from {
+		transform: scale(0.8);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes scaleDownImg {
+	from {
+		transform: scale(1.5);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+```
